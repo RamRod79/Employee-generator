@@ -6,11 +6,11 @@ const generateTeam = function (team) {
     <article class="col-md-4 pb-3">
     <div class="card">
       <div class="card-header" style="background-color: blue; color: whitesmoke">
-        <h2>${manager.getName()}</h2>
+        <h2>${manager.getName()}<i class="fa-solid fa-mug-saucer"></i></h2>
       </div>
        <ul class="list-group list-group-flush">
         <li class="list-group-item">ID: ${manager.getId()}</li>
-        <li class="list-group-item">Email: ${manager.getEmail()}</li>
+        <li class="list-group-item">Email: <a href="mailto:${manager.getEmail()}">${manager.getEmail()}</a></li>
         <li class="list-group-item">Office Number: ${manager.getOfficeNumber()}</li>
       </ul>
     </div>
@@ -23,12 +23,12 @@ team.engineers.forEach(function(engineer){
   <article class="col-md-4 pb-3">
   <div class="card">
     <div class="card-header" style="background-color: blue; color: whitesmoke">
-      <h2>${engineer.getName()}</h2>
+      <h2>${engineer.getName()}<i class="fa-solid fa-code"></i></h2>
     </div>
      <ul class="list-group list-group-flush">
       <li class="list-group-item">ID: ${engineer.getId()}</li>
-      <li class="list-group-item">Email: ${engineer.getEmail()}</li>
-      <li class="list-group-item">GitHub: ${engineer.getGitHub()}</li>
+      <li class="list-group-item">Email: <a href="mailto:${engineer.getEmail()}">${engineer.getEmail()}</a></li>
+      <li class="list-group-item">GitHub: <a href="https://www.github.com/${engineer.getGitHub()}">${engineer.getGitHub()}</a></li>
     </ul>
   </div>
 </article>
@@ -40,11 +40,11 @@ team.interns.forEach(function(intern){
   <article class="col-md-4 pb-3">
   <div class="card">
     <div class="card-header" style="background-color: blue; color: whitesmoke">
-      <h2>${intern.getName()}</h2>
+      <h2>${intern.getName()}<i class="fa-sharp fa-solid fa-graduation-cap"></i></h2>
     </div>
      <ul class="list-group list-group-flush">
       <li class="list-group-item">ID: ${intern.getId()}</li>
-      <li class="list-group-item">Email: ${intern.getEmail()}</li>
+      <li class="list-group-item">Email: <a href="mailto:${intern.getEmail()}">${intern.getEmail()}</a></li>
       <li class="list-group-item">School: ${intern.getSchool()}</li>
     </ul>
   </div>
@@ -75,6 +75,7 @@ const generateHTML = function (team) {
       integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N"
       crossorigin="anonymous"
     />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <title>My Team!</title>
   </head>
