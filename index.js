@@ -4,7 +4,8 @@ const inquirer = require("inquirer");
 const Manager = require("./lib/Manager");
 const Engineer = require("./lib/Engineer");
 const Intern = require("./lib/Intern");
-// const fs = require("fs");
+const generateHTML = require("./src/generateHTML")
+const fs = require("fs");
 
 //Tracks employees info
 const managers = [];
@@ -38,15 +39,13 @@ function createManager() {
   {
     type: "input",
     name: "officeNumber",
-    message: "What is the Manager's office number",
+    message: "What is the Manager's office number?",
   },
 
    ]).then(function(answers) {
-    console.log(answers);
     const {id, email, name, officeNumber} = answers
     managers.push(new Manager(id, email, name, officeNumber));
 
-    console.log(managers);
     createTeam();
    })
 }
@@ -79,10 +78,8 @@ function createEngineer() {
   },
 
    ]).then(function(answers) {
-    console.log(answers);
     const {id, email, name, github} = answers
     engineers.push(new Engineer(id, email, name, github));
-    console.log(engineers);
     createTeam();
    });
 }
@@ -115,10 +112,8 @@ function createIntern() {
   },
 
    ]).then(function(answers) {
-    console.log(answers);
     const {id, email, name, school} = answers
     interns.push(new Intern(id, email, name, school));
-    console.log(interns);
     createTeam();
    });
 }
@@ -134,7 +129,6 @@ function createTeam() {
           },
 
     ]).then(function(answers) {
-        console.log(answers);
 
         switch(answers.menuOption) {
             case 'Intern':
@@ -144,7 +138,7 @@ function createTeam() {
             createEngineer();
             break;
             default:
-                //generateHtml();
+                fs.writeFileSync('./dist/team.html',generateHTML({ managers, engineers, interns }));
                 return;
         }
     });
