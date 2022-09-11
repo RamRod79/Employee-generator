@@ -1,51 +1,51 @@
-const Employee = require('../lib/Employee');
+const Manager = require('../lib/Manager');
 
 
-describe('Test Employee Class', () => {
-    it('should create a new employee object', () => {
-    const me = new Employee(1, 'armando@gmail.com', "Armando");
+describe('Test Manager Class', () => {
+    it('should create a new Manager object', () => {
+    const me = new Manager(4, 'carlos@gmail.com', "Carlos");
 
     expect(typeof me).toBe("object");
     })
 
     it('can set a name via constructor', () => {
-        const me = new Employee(1, 'armando@gmail.com', "Armando");
+        const me = new Manager(4, 'carlos@gmail.com', "Carlos");
 
-        expect(me.name).toEqual("Armando");
+        expect(me.name).toEqual("Carlos");
     })
 
     it('can set a id via constructor', () => {
-        const me = new Employee(1, 'armando@gmail.com', "Armando");
+        const me = new Manager(4, 'carlos@gmail.com', "Carlos");
 
-        expect(me.id).toEqual(1);
+        expect(me.id).toEqual(4);
     })
 
     it('can set a email via constructor', () => {
-        const me = new Employee(1, 'armando@gmail.com', "Armando");
+        const me = new Manager(4, 'carlos@gmail.com', "Carlos");
 
-        expect(me.email).toEqual("armando@gmail.com");
+        expect(me.email).toEqual("carlos@gmail.com");
     })
     
     it('can get email via getEmail() method', () => {
-        const me = new Employee(1, 'armando@gmail.com', "Armando");
+        const me = new Manager(4, 'carlos@gmail.com', "Carlos");
 
-        expect(me.getEmail()).toEqual("armando@gmail.com");
+        expect(me.getEmail()).toEqual("carlos@gmail.com");
     })
     
     it('can get name via getName() method', () => {
-        const me = new Employee(1, 'armando@gmail.com', "Armando");
+        const me = new Manager(4, 'carlos@gmail.com', "Carlos");
 
-        expect(me.getName()).toEqual("Armando");
+        expect(me.getName()).toEqual("Carlos");
     })
     
     it('can get id via getId() method', () => {
-        const me = new Employee(1, 'armando@gmail.com', "Armando");
+        const me = new Manager(4, 'carlos@gmail.com', "Carlos");
 
-        expect(me.getId()).toEqual(1);
+        expect(me.getId()).toEqual(4);
     })
        
     it('can get role via getRole() method', () => {
-        const me = new Employee(1, 'armando@gmail.com', "Armando");
+        const me = new Manager(4, 'carlos@gmail.com', "Carlos");
 
         expect(me.getRole()).toEqual("Employee");
     })
