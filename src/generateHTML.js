@@ -6,7 +6,8 @@ const generateTeam = function (team) {
     <article class="col-md-4 pb-3">
     <div class="card">
       <div class="card-header" style="background-color: blue; color: whitesmoke">
-        <h2>${manager.getName()}<i class="fa-solid fa-mug-saucer"></i>Manager</h2>
+        <h2>${manager.getName()}</h2>
+        <p><i class="fa-solid fa-mug-saucer"></i>Manager</p>
       </div>
        <ul class="list-group list-group-flush">
         <li class="list-group-item">ID: ${manager.getId()}</li>
@@ -23,7 +24,8 @@ team.engineers.forEach(function(engineer){
   <article class="col-md-4 pb-3">
   <div class="card">
     <div class="card-header" style="background-color: blue; color: whitesmoke">
-      <h2>${engineer.getName()}<i class="fa-solid fa-code"></i>Engineer</h2>
+      <h2>${engineer.getName()}</h2>
+      <p><i class="fa-solid fa-code"></i>Engineer</p>
     </div>
      <ul class="list-group list-group-flush">
       <li class="list-group-item">ID: ${engineer.getId()}</li>
@@ -40,7 +42,8 @@ team.interns.forEach(function(intern){
   <article class="col-md-4 pb-3">
   <div class="card">
     <div class="card-header" style="background-color: blue; color: whitesmoke">
-      <h2>${intern.getName()}<i class="fa-sharp fa-solid fa-graduation-cap"></i>Intern</h2>
+      <h2>${intern.getName()}</h2>
+      <p><i class="fa-sharp fa-solid fa-graduation-cap"></i>Intern</p>
     </div>
      <ul class="list-group list-group-flush">
       <li class="list-group-item">ID: ${intern.getId()}</li>
