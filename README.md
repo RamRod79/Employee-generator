@@ -2,7 +2,7 @@
 
 ## Description
 
-A short description explaining the what, why, and how of project "README-Generator":
+A short description explaining the what, why, and how of project "Employee-Generator":
 
  A Node.js command-line application that takes in information about employees on a software engineering team and generates an HTML webpage that displays summaries for each person. Includes unit tests for each part of the code to ensure that it passes all of them.
 
@@ -54,7 +54,8 @@ THEN I exit the application, and the HTML is generated
 
 ## Installation
 
-Pulling the GitHub repository from the follwing URL: https://github.com/RamRod79/README-Generator.git and typing the follwoing command ,'npm install', in the terminal will ensure the dependencies are installed and the program can run properly.
+Pulling the GitHub repository from the follwing URL: https://github.com/RamRod79/Employee-Generator.git and typing the follwoing command ,'npm install', in the terminal will ensure the dependencies are installed and the program can run properly.
+
 
 ## Usage
 
@@ -69,6 +70,8 @@ List of collaborators:
 ## License
 
 The following licenses have been used in the development of this project:
+
+N/A
 
 
 ## Badges
@@ -95,6 +98,8 @@ Engineer.test.js
 Intern.test.js
 
 Manager.test.js
+
+Running "npm test" will run and test the files.
 
 ## Contact Info
 
