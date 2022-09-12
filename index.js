@@ -50,6 +50,9 @@ function createManager() {
    })
 }
 
+// Function to ask input for Enhineer
+// Array of questions for user input
+
 function createEngineer() {
     inquirer
     .prompt([
@@ -83,6 +86,9 @@ function createEngineer() {
     createTeam();
    });
 }
+
+// Function to ask input for Intern
+// Array of questions for user input
 
 function createIntern() {
     inquirer
